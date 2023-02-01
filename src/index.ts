@@ -12,6 +12,10 @@ app.get('/', function (req, res) {
     res.send('Hello World' + sum2);
 });
 
+app.get('/healthcheck', function (req, res) {
+    res.status(200).send('OK');
+});
+
 app.listen(3000, () => {
     console.log('Server started listening on port 3000');
 });
